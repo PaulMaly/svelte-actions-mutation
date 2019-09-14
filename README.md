@@ -12,24 +12,24 @@ npm install --save svelte-actions-mutation
 
 ```html
 <button bind:this={btn} use:mutation={options} on:click={mutate}>
-	Mutate
+  Mutate
 </button>
 
 <script>
-	import mutation from 'svelte-actions-mutation';
+  import mutation from 'svelte-actions-mutation';
 	
-	let btn;
+  let btn;
 
-	function mutate() {
-		btn.classList.add(Math.random().toString(36).substring(7));
+  function mutate() {
+    btn.classList.add(Math.random().toString(36).substring(7));
   }
   
   const options = {
     attributeOldValue: true,
     attributeFilter: [ 'class' ],
     attributes(mutation) {
-		  console.log(`Attribute ${mutation.attributeName} mutated. Old value: ${mutation.oldValue}`);
-	  }
+      console.log(`Attribute ${mutation.attributeName} mutated. Old value: ${mutation.oldValue}`);
+	}
   };
 </script>
 ```
@@ -37,7 +37,7 @@ npm install --save svelte-actions-mutation
 ## Options
 
 | Name | Type | Description |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- |
 | `attributes` | `Function` | Callback to watch for changes to the value of attributes on the node or nodes being monitored.  |
 | `characterData` | `Function` | Callback to monitor the specified target node or subtree for changes to the character data contained within the node or nodes. |
 | `childList` | `Function` | Callback to monitor the target node (and, if `subtree` is `true`, its descendants) for the addition of new child nodes or removal of existing child nodes.|
