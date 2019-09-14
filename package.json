@@ -1,0 +1,36 @@
+{
+    "name": "svelte-actions-mutation",
+    "version": "1.0.0",
+    "description": "MutationObserver action plugin for Svelte 3",
+    "main": "index.js",
+    "module": "index.mjs",
+    "scripts": {
+        "build": "rollup -c",
+        "prepublish": "npm run lint && npm run build",
+        "lint": "eslint src"
+    },
+    "files": [
+        "index.js",
+        "index.mjs"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PaulMaly/svelte-actions-mutation.git"
+    },
+    "keywords": [
+        "svelte",
+        "transitions",
+        "css",
+        "animation"
+    ],
+    "author": "PaulMaly",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/PaulMaly/svelte-actions-mutation/issues"
+    },
+    "homepage": "https://github.com/PaulMaly/svelte-actions-mutation#readme",
+    "devDependencies": {
+        "eslint": "latest",
+        "rollup": "latest"
+    }
+}
